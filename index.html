@@ -84,7 +84,7 @@
 <div id="window-resizer-tooltip" style="display: none;"><a href="http://blogs.sitepointstatic.com/examples/tech/css3-starwars/index.html#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1275</span> x <span class="tooltipHeight" id="winHeight">773</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1275</span> x <span class="tooltipHeight" id="vpHeight">367</span></div>
 
 
-<audio style="display: none;" controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 2000)">
+<audio style="display: none;" controls="controls" onloadeddata="playAudio.call(this)">
     <source src="./assets/sounds/main.mp3" type="audio/mpeg" />
 </audio>
 <script src="https://code.jquery.com/jquery.js"></script>

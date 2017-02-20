@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+@font-face {
+    font-family: starWarFont;
+    src: url(../fonts/STARWARS.woff);
+}
+
 html, body {
 	background: #222;
 }
@@ -108,7 +113,7 @@ html, body {
 }
 
 nav {
-	font-family: Open Sans;
+	font-family: starWarFont, Open Sans;
 	color: white;
 	background: #111;
 	position: absolute;

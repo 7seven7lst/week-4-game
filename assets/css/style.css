@@ -1,0 +1,25 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@font-face {
+    font-family: starWarFont;
+    src: url(../fonts/STARWARS.woff);
+}
+
+body{
+	font-family: "Droid Sans", arial, verdana, sans-serif;
+}
+
+h3{
+	font-family: starWarFont, arial, verdana, sans-serif;
+	color: #C0C0C0;
+}
+
+div#char-to-pick, div#enemy-to-pick, div#player, div#enemy {
+	display: inline-block;
+	border: 4px dotted white;
+	margin: 20px;
+	background-color: white;
+	opacity: 1;
+	/*color: #ffff00;*/
+	text-shadow: 2px 1px green;
+	box-shadow: 2px 2px 2px white;
+}

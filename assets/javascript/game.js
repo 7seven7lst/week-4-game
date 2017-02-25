@@ -7,6 +7,34 @@ const chars = [
 ];
 
 $(document).ready(function(){
+	console.log("faction is>>>", $.url().param('faction'));
+	let faction = $.url().param('faction');
+	let audioSourceUrl;
+	switch(faction){
+		case "alliance":
+			audioSourceUrl = "./assets/sounds/main.mp3";
+			$("body").css({'background-image': `url("./assets/images/${faction}.png")`, "background-size": "cover"});
+			break;
+		case "jedi":
+			audioSourceUrl = "./assets/sounds/main.mp3";
+			$("body").css({'background-image': `url("./assets/images/${faction}.png")`, "background-size": "cover"});
+			break;
+		case "sith":
+			audioSourceUrl = "./assets/sounds/imperial_march.mp3";
+			$("body").css({'background-image': `url("./assets/images/${faction}.png")`, "background-size": "cover"});
+			break;
+		case "other": 
+			audioSourceUrl = "./assets/sounds/imperial_march.mp3";
+			$("body").css({'background-image': `url("./assets/images/${faction}.png")`, "background-size": "cover"});
+			break;
+		default:
+		audioSourceUrl = "./assets/sounds/main.mp3";
+		$("body").css({'background-image': `url("./assets/images/other.png")`, "background-size": "cover"});
+	}
+	let audio = $("#player");
+	$("#audio-source").attr("src", audioSourceUrl);
+	audio.load();
+
 	let starWarGame = new StarWarGame(chars);
   $(document).on("click", "#char-to-pick, #enemy-to-pick, #attack-button, #restart-button", function(e){
     e.preventDefault();

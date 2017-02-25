@@ -51,8 +51,12 @@ class StarWarGame {
     if (this.duelStatus ==="lose"){ // lose
       this.gameStatus = "lose";
       console.log("you die, game over.");
+      $("#attack-button").prop("disabled",true);
     } else if (this.duelStatus === "win"){
+      $("#attack-button").prop("disabled",true);
       console.log("you killed XX, now continue");
+      $("#player-damage").text("");
+      $("#enemy-damage").text("");
       this.currentEnemy.removeCharacterFromDOM("#fight-defender");
       this.currentEnemy = null;
       if (this.enemyChars.length ===0) { // no more ppl to fight
@@ -63,6 +67,7 @@ class StarWarGame {
     } else if (this.duelStatus === "tie"){ // lose
       console.log("you have died");
       console.log("this.gameStatus is>>>", this.duelStatus); 
+      $("#attack-button").prop("disabled",true);
       this.currentEnemy.removeCharacterFromDOM("#fight-defender");
       this.currentEnemy = null;
       // if both player have died, then it count as lose

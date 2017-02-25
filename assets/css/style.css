@@ -23,3 +23,8 @@ div#char-to-pick, div#enemy-to-pick, div#player, div#enemy {
 	text-shadow: 2px 1px green;
 	box-shadow: 2px 2px 2px white;
 }
+
+div#player-damage, div#enemy-damage {
+	color: #C0C0C0;
+	padding: 10px;
+}

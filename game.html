@@ -11,31 +11,49 @@
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-  <h3>Characters to Pick</h3>
-  <div id="chars-to-pick">
+<body style="text-align: center;">
+  <div class="container">
+    <div class="row">
+      <h3 style="padding: 10px;">Characters to Pick</h3>
+    </div>
+    <div class="row">
+      <div id="chars-to-pick"></div>
+    </div>
+      
+    <div class="row">
+      <h3 style="padding: 10px;">Enemies Available to Attack</h3>
+      <div id="enemy-characters"></div>
+    </div>
     
-  </div>
-  <h3>Your Character</h3>
-  <div id="player-character">
-    
-  </div>
-  <h3>Enemies Available to Attack</h3>
-  <div id="enemy-characters">
-    
-  </div>
-  <div id="fight-section">
-    <h3>Fight Section</h3>
-    <h3>Attacker</h3>
-    <div id="fight-attacker"></div>
-    <button id="attack-button">Attack</button>
-    <h3>Defender</h3>
-    <div id="fight-defender"></div>
-    <div id="restart-button">
-      <button>Restart</button>
+    <div class="row" style="padding-bottom: 10px;">
+      <h3>Fight Section</h3>
+    </div>
+    <div class="row text-center" id="fight-section" style="display: flex;flex-wrap: wrap;align-items: center;justify-content: center;">
+      <div class="col-xs-5">
+        <h3 style="padding: 10px;">Your Character</h3>
+        <div id="player-character"></div>
+      </div>
+      <div class="col-xs-2">
+        <button id="attack-button" class="btn btn-info">Attack</button>
+      </div>
+      <div class="col-xs-5">
+        <h3 style="padding:10px;">Defender</h3>
+        <div id="fight-defender"></div>
+      </div>
+    </div>
+
+    <div class="row" id="stats-section">
+      <div id="player-damage">
+      </div>
+      <div id="enemy-damage">
+      </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+      <div id="restart-button">
+        <button class="btn btn-info">Restart</button>
+      </div>
     </div>
   </div>
-
   <audio id="player" style="display: none;" controls autoplay>
     <source id="audio-source" src="" type="audio/mpeg" />
   </audio>

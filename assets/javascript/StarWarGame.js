@@ -27,7 +27,6 @@ class StarWarGame {
     this.currentEnemy = _.find(this.enemyChars, char=>char.name===enemy.name);
     this.enemyChars = _.filter(this.enemyChars, char=>char.name!==enemy.name);
     this.currentEnemy.setId("enemy");
-    console.log("this.currentEnemy is >>>", this.currentEnemy);
     this.currentEnemy.appendCharacterDOM("#fight-defender");
     this.currentEnemy.removeCharacterFromDOM("#enemy-characters");
   }
@@ -50,11 +49,9 @@ class StarWarGame {
     this.determineDuelStatus();
     if (this.duelStatus ==="lose"){ // lose
       this.gameStatus = "lose";
-      console.log("you die, game over.");
       $("#attack-button").prop("disabled",true);
     } else if (this.duelStatus === "win"){
       $("#attack-button").prop("disabled",true);
-      console.log("you killed XX, now continue");
       $("#player-damage").text("");
       $("#enemy-damage").text("");
       this.currentEnemy.removeCharacterFromDOM("#fight-defender");
@@ -65,8 +62,6 @@ class StarWarGame {
         this.gameStatus = "continue";
       }
     } else if (this.duelStatus === "tie"){ // lose
-      console.log("you have died");
-      console.log("this.gameStatus is>>>", this.duelStatus); 
       $("#attack-button").prop("disabled",true);
       this.currentEnemy.removeCharacterFromDOM("#fight-defender");
       this.currentEnemy = null;

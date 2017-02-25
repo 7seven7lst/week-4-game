@@ -14,6 +14,8 @@ class GameCharacterDOM {
   	this.charHP = $("<span>");
   	this.charHP.attr({"id": "current-character-hp"});
   	this.charHP.text(this.healthPoint);
+  	this.charHPBar = $("<progress>");
+  	this.charHPBar.attr({"id": "health-bar", "value": 100, "max": 100});
   	this.charImg = $("<img>");
   	this.charImg.attr({
   		"id": "current-character-img",
@@ -21,7 +23,7 @@ class GameCharacterDOM {
   		"width": 100,
   		"height": 100,
   	});
-  	this.charDom.append(this.charTitle, this.charHP, this.charImg);
+  	this.charDom.append(this.charTitle, this.charHP, this.charHPBar, this.charImg);
 	}
 
 	attackEnemy(enemy){
@@ -49,9 +51,6 @@ class GameCharacterDOM {
 	}
 
 	removeCharacterFromDOM(targetSelector){
-		console.log("this.name is >>>", this.name);
-		console.log("targetSelector is>>>", targetSelector)
-		console.log(`${targetSelector} > div`);
 		let self = this;
 		$(`${targetSelector} > div`).each(function () {
 			if($(this).attr('data-char')===self.name){

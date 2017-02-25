@@ -1,9 +1,9 @@
 'use strict';
 
 const chars = [
-{name: "Darth Vader", healthPoint: 100, baseAttackPower: 10, counterAttackPower: 15},
-{name: "Obiwan", healthPoint: 180, baseAttackPower: 10, counterAttackPower: 15}, 
-{name: "Darth Sidious", healthPoint: 240, baseAttackPower: 10, counterAttackPower: 20},
+	{name: "Darth Vader", healthPoint: 100, baseAttackPower: 10, counterAttackPower: 15},
+	{name: "Obiwan", healthPoint: 180, baseAttackPower: 10, counterAttackPower: 15}, 
+	{name: "Darth Sidious", healthPoint: 240, baseAttackPower: 10, counterAttackPower: 20},
 ];
 
 function canAttack(starWarGame){
@@ -18,7 +18,6 @@ function reset(){
 }
 
 $(document).ready(function(){
-	console.log("faction is>>>", $.url().param('faction'));
 	let faction = $.url().param('faction');
 	let audioSourceUrl;
 	switch(faction){
@@ -53,12 +52,10 @@ $(document).ready(function(){
     e.stopPropagation();
 		let clickerId = $(this).attr("id");
 		let name, selectedChar;
-    console.log("clickerId is>>>", clickerId);
 		switch(clickerId){
 			case "char-to-pick":
 				name = $(this).attr("data-char");
 				selectedChar = _.find(starWarGame.charList, char=>char.name===name);
-        		console.log("selectedChar is >>>", selectedChar);
 				starWarGame.choosePlayer(selectedChar);
 				if (canAttack(starWarGame)){
 					$("#attack-button").prop("disabled",false);
@@ -73,9 +70,7 @@ $(document).ready(function(){
 				}
 				break;
 			case "attack-button":
-        console.log("playerChar is >>>", starWarGame);
 				let damage=starWarGame.playerChar.attackEnemy(starWarGame.currentEnemy);
-				console.log("damage is >>>>", damage);
 				$("#player-damage").text(`you attacked ${starWarGame.currentEnemy.name} for ${damage.player}`);
 				$("#enemy-damage").text(`${starWarGame.currentEnemy.name} attacked you for ${damage.enemy}`);
         starWarGame.playerChar.updateCharacterHPDOM();

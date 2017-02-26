@@ -1,5 +1,3 @@
-'use strict';
-
 const chars = [
 	{name: "Darth Vader", healthPoint: 160, baseAttackPower: 10, counterAttackPower: 15},
 	{name: "Obi-wan Kenobi", healthPoint: 180, baseAttackPower: 10, counterAttackPower: 15}, 

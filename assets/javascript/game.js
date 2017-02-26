@@ -1,9 +1,11 @@
 'use strict';
 
 const chars = [
-	{name: "Darth Vader", healthPoint: 100, baseAttackPower: 10, counterAttackPower: 15},
-	{name: "Obiwan", healthPoint: 180, baseAttackPower: 10, counterAttackPower: 15}, 
-	{name: "Darth Sidious", healthPoint: 240, baseAttackPower: 10, counterAttackPower: 20},
+	{name: "Darth Vader", healthPoint: 160, baseAttackPower: 10, counterAttackPower: 15},
+	{name: "Obi-wan Kenobi", healthPoint: 180, baseAttackPower: 10, counterAttackPower: 15}, 
+	{name: "Darth Sidious", healthPoint: 240, baseAttackPower: 8, counterAttackPower: 20},
+	{name: "Mace Windu", healthPoint: 170, baseAttackPower: 12, counterAttackPower: 18},
+	{name: "Yoda", healthPoint: 300, baseAttackPower: 5, counterAttackPower: 18},
 ];
 
 function canAttack(starWarGame){
@@ -15,6 +17,7 @@ function reset(){
 	$("#enemy-characters").text("");
 	$("#player-character").text("");
 	$("#fight-defender").text("");
+	$("#game-status").text("");
 }
 
 $(document).ready(function(){

@@ -8,9 +8,31 @@ body{
 	font-family: "Droid Sans", arial, verdana, sans-serif;
 }
 
+nav{
+	background-color: transparent; 
+	margin: 0px;
+}
+
+i{
+	padding: 10px;
+	color: #8db5f4;
+}
+
 h3{
 	font-family: starWarFont, arial, verdana, sans-serif;
-	color: #C0C0C0;
+	color: white;
+	letter-spacing: 2px;
+	text-shadow: 2px 1px #C0C0C0;
+}
+
+div.selecting-section {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	min-height: 200px;
+	background-color: grey;
+	opacity: 0.8;
 }
 
 div#char-to-pick, div#enemy-to-pick, div#player, div#enemy {
@@ -18,13 +40,38 @@ div#char-to-pick, div#enemy-to-pick, div#player, div#enemy {
 	border: 4px dotted white;
 	margin: 20px;
 	background-color: white;
-	opacity: 1;
-	/*color: #ffff00;*/
-	text-shadow: 2px 1px green;
+	text-shadow: 1px 1px #4286f4;
 	box-shadow: 2px 2px 2px white;
 }
 
-div#player-damage, div#enemy-damage {
-	color: #C0C0C0;
+div#player-damage, div#enemy-damage, div#game-status {
+	display: block;
+	color: white;
+	font-size: 16px;
 	padding: 10px;
 }
+
+.character-img-container-grey{
+	background-color: #C0C0C0;
+}
+
+.character-img-container-red{
+	background-color: #f44842;
+}
+
+.character-img-container-blue {
+	background-color: #548bf2;
+}
+
+
+progress::-webkit-progress-value { background-color: red; }
+progress::-moz-progress-bar { background-color: red; }
+
+.health-bar-display{
+	display: block;
+	background-color: red;
+}
+
+
+
+
